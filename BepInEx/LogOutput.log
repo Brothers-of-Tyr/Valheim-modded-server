@@ -1,0 +1,77 @@
+﻿[Message:   BepInEx] BepInEx 5.4.8.0 - valheim
+[Info   :   BepInEx] Running under Unity v2019.4.20.7197120
+[Info   :   BepInEx] CLR runtime version: 4.0.30319.42000
+[Info   :   BepInEx] Supports SRE: True
+[Info   :   BepInEx] System platform: Bits64, Windows
+[Message:   BepInEx] Preloader started
+[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Patching [UnityEngine.CoreModule] with [BepInEx.Chainloader]
+[Message:   BepInEx] Preloader finished
+[Message:   BepInEx] Chainloader ready
+[Message:   BepInEx] Chainloader started
+[Info   :   BepInEx] 11 plugins to load
+[Info   :   BepInEx] Loading [Clock Mod 0.8.4]
+[Info   :   BepInEx] Loading [Custom Raids 1.1.0]
+[Info   :Custom Raids] Loading configurations...
+[Info   : Unity Log] Loading general configuration from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.cfg.
+[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.raids.cfg.
+[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.supplemental.deathsquitoseason.cfg.
+[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.supplemental.ragnarok.cfg.
+[Info   :   BepInEx] Loading [NoStamCosts 0.1.2]
+[Info   :   BepInEx] Loading [ValheimBerryPlantingMod 1.2]
+[Info   :   BepInEx] Loading [PreciseRotation 1.0.1]
+[Info   :   BepInEx] Loading [Use Equipment in Water 0.2.1.0]
+[Info   :   BepInEx] Loading [MapSyncPlugin 1.0.0.0]
+[Info   :   BepInEx] Loading [Paddle Power 1.0.1]
+[Info   :   BepInEx] Loading [Equipment and Quick Slots 1.0.4]
+[Info   :   BepInEx] Loading [Jam 1.0.0]
+[Warning: Unity Log] Looking for recipes.json in F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\plugins\Jam\recipes.json
+[Warning: Unity Log] Looking for jamassets in F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\plugins\Jam\jamassets
+[Info   :   BepInEx] Loading [Athletics Skill 1.0.0.0]
+[Message:   BepInEx] Chainloader startup complete
+[Info   : Unity Log] 03/08/2021 18:25:12: Starting to load scene:start
+
+[Warning: Unity Log] Only custom filters can be played. Please add a custom filter or an audioclip to the audiosource (Amb_MainMenu).
+[Info   : Unity Log] 03/08/2021 18:25:21: Initializing world generator seed: ( 0 )   menu:True  worldgen version:1
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Using mountain distance: 1000
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Render threading mode:MultiThreaded
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Using steam_appid.txt
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Using steam APPID:892970
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Authentication:k_ESteamNetworkingAvailability_Attempting
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Steam initialized, persona:BTYR Phoenix_Necro
+
+[Warning: Unity Log] 03/08/2021 18:25:21: Missing audio clip in music respawn
+
+[Info   : Unity Log] 03/08/2021 18:25:21: Checking for installed DLCs
+
+[Info   : Unity Log] 03/08/2021 18:25:21: DLC:beta installed:False
+
+[Info   : Unity Log] 03/08/2021 18:25:22: Loaded localization English
+
+[Info   : Unity Log] 03/08/2021 18:25:22: Loaded localization English
+
+[Warning: Unity Log] [Jam] ObjectDB_Awake_Patch (0)
+[Warning: Unity Log] [Jam] Did not register items: ZNetScene.instance , ObjectDB.instance StartGui (ObjectDB), item count 0
+[Warning: Unity Log] [Jam] Did not register recipes: ZNetScene.instance , ObjectDB.instance StartGui (ObjectDB), item count 0
+[Warning: Unity Log] [Jam] ObjectDB_CopyOtherDB_Patch (378)
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_RaspberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyRaspberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_BlueberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyBlueberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_CloudberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyCloudberryJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_KingsJam
+[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_NordicJam
+[Info   : Unity Log] 03/08/2021 18:25:22: ARG 0 F:\Steam\steamapps\common\Valheim - Moded client\valheim.exe
+
+[Info   : Unity Log] 03/08/2021 18:25:24: UI Group status changed Menu = True
+
+[Warning:  HarmonyX] UnpatchAll has been called with harmonyID=null - This will remove ALL HARMONY PATCHES. If you want to only unpatch patches created by this instance (harmony-auto-76c3ffe4-1bf6-41b3-8925-bbb2cc33df97), use UnpatchSelf() instead.
+[Info   : Unity Log] 03/08/2021 18:26:45: Steam manager on destroy
+
