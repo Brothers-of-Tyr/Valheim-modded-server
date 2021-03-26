@@ -1,77 +1,861 @@
-﻿[Message:   BepInEx] BepInEx 5.4.8.0 - valheim
+﻿[Message:   BepInEx] BepInEx 5.4.9.0 - valheim
 [Info   :   BepInEx] Running under Unity v2019.4.20.7197120
 [Info   :   BepInEx] CLR runtime version: 4.0.30319.42000
 [Info   :   BepInEx] Supports SRE: True
 [Info   :   BepInEx] System platform: Bits64, Windows
 [Message:   BepInEx] Preloader started
-[Info   :   BepInEx] 1 patcher plugin loaded
+[Info   :   BepInEx] Loaded 1 patcher method from [SlimVML.Loader 1.1.0.0]
+[Info   :   BepInEx] 2 patcher plugins loaded
 [Info   :   BepInEx] Patching [UnityEngine.CoreModule] with [BepInEx.Chainloader]
+[Info   :   SlimVML] Loading DLLs from F:\Steam\steamapps\common\Valheim - Moded client\InSlimVML\Mods
+[Warning:   SlimVML] Skipping 0Harmony.dll since it's in ignore list
+[Info   :   SlimVML] Invoking static void SlimAssist.SlimAssist::Main(string[] args)
 [Message:   BepInEx] Preloader finished
 [Message:   BepInEx] Chainloader ready
 [Message:   BepInEx] Chainloader started
-[Info   :   BepInEx] 11 plugins to load
+[Info   :   BepInEx] 17 plugins to load
+[Warning:   BepInEx] Skipping [Jam 1.0.0] because a newer version exists (Jam 1.0.0)
 [Info   :   BepInEx] Loading [Clock Mod 0.8.4]
+[Info   :  HarmonyX] Created Harmony instance id=harmony-auto-db511dae-2d39-4123-9c88-31574cfadaff, version=2.0.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony20.dll - Started from System.Void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel,System.Func`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]) location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+[Info   :  HarmonyX] Patching harmony-auto-db511dae-2d39-4123-9c88-31574cfadaff...
+[Info   :  HarmonyX] Patching System.Void ZNetScene::Awake()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void ClockMod.BepInExPlugin+Awake_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-db511dae-2d39-4123-9c88-31574cfadaff took 22ms
+[Info   :  HarmonyX] Patching harmony-auto-db511dae-2d39-4123-9c88-31574cfadaff...
+[Info   :  HarmonyX] Patching System.Void Console::InputText()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Console::InputText() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ClockMod.BepInExPlugin+InputText_Patch::Prefix(Console __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-db511dae-2d39-4123-9c88-31574cfadaff took 81ms
 [Info   :   BepInEx] Loading [Custom Raids 1.1.0]
 [Info   :Custom Raids] Loading configurations...
-[Info   : Unity Log] Loading general configuration from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.cfg.
-[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.raids.cfg.
-[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.supplemental.deathsquitoseason.cfg.
-[Info   : Unity Log] Loading raid event configurations from F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\config\custom_raids.supplemental.ragnarok.cfg.
+[Info   :  HarmonyX] ### Harmony id=mod.custom_raids, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.11
+[Info   :  HarmonyX] Patching void EnvMan::Awake() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void Valheim.CustomRaids.EvnManTest::Postfix(EnvMan& __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void EnvMan::Awake()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void ZoneSystem::Start() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void Valheim.CustomRaids.ZoneSystemPatch::Postfix(ZoneSystem& __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZoneSystem::Start()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void RandEventSystem::Start() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void Valheim.CustomRaids.RaidEventSystemPatch::Postfix(RandEventSystem& __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void RandEventSystem::Start()
+[Info   :  HarmonyX] Writing postfixes
 [Info   :   BepInEx] Loading [NoStamCosts 0.1.2]
+[Info   :  HarmonyX] ### Harmony id=Basil_NoStamCosts, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.11
+[Info   :  HarmonyX] Patching virtual void Player::UseStamina(float v) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void ValheimNoStam.Patches.NoStaminaCostPatch::Prefix(Player __instance, Single& v)
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual void Player::UseStamina(float v)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :   BepInEx] Loading [Configuration Manager 16.1]
 [Info   :   BepInEx] Loading [ValheimBerryPlantingMod 1.2]
+[Info   :  HarmonyX] ### Harmony id=com.bkeyes93.ValheimBerryPlantingMod, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching static UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object original, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void ValheimBerryPlantingMod.PlacePiece_Hook::Postfix(UnityEngine.Object __result)
+
+[Info   :  HarmonyX] Running ILHook manipulator on static UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object original, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void Player::SetLocalPlayer() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void ValheimBerryPlantingMod.Player_SetLocalPlayer_Hook::Postfix(System.Collections.Generic.HashSet<string> ___m_knownRecipes)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::SetLocalPlayer()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :   BepInEx] Loading [SimpleRecycling 0.0.13]
 [Info   :   BepInEx] Loading [PreciseRotation 1.0.1]
+[Info   :  HarmonyX] ### Harmony id=com.github.johndowson.PreciseRotation, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching void Player::UpdatePlacementGhost(bool flashGuardStone) with 0 prefixes, 0 postfixes, 1 transpilers, 0 finalizers
+1 transpilers:
+* static System.Collections.Generic.IEnumerable<HarmonyLib.CodeInstruction> PreciseRotation.PreciseRotation+PieceRotation_Patch::Transpiler(System.Collections.Generic.IEnumerable<HarmonyLib.CodeInstruction> instructions)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::UpdatePlacementGhost(bool flashGuardStone)
+[Info   :  HarmonyX] Transpiling void Player::UpdatePlacementGhost(bool flashGuardStone)
+[Info   :  HarmonyX] Running transpiler static System.Collections.Generic.IEnumerable<HarmonyLib.CodeInstruction> PreciseRotation.PreciseRotation+PieceRotation_Patch::Transpiler(System.Collections.Generic.IEnumerable<HarmonyLib.CodeInstruction> instructions)
 [Info   :   BepInEx] Loading [Use Equipment in Water 0.2.1.0]
 [Info   :   BepInEx] Loading [MapSyncPlugin 1.0.0.0]
+[Info   :  HarmonyX] Created Harmony instance id=harmony-auto-a894053b-c507-46b4-853f-6a554ec22834, version=2.0.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony20.dll - Started from System.Void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel,System.Func`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]) location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834...
+[Info   :  HarmonyX] Patching System.Void Console::InputText()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Console::InputText() with 2 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+2 prefixes:
+* static bool ClockMod.BepInExPlugin+InputText_Patch::Prefix(Console __instance)
+* static bool ValheimMapSyncBepinex.MapSyncPlugin::Prefix(Console __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834 took 54ms
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834...
+[Info   :  HarmonyX] Patching System.Void Chat::OnNewChatMessage(UnityEngine.GameObject,System.Int64,UnityEngine.Vector3,Talker+Type,System.String,System.String)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ValheimMapSyncBepinex.MapSyncPlugin::Prefix(UnityEngine.GameObject& go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, String& user, String& text)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834 took 8ms
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834...
+[Info   :  HarmonyX] Patching System.Void Minimap::Update()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Minimap::Update() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ValheimMapSyncBepinex.MapSyncPlugin::Prefix(Boolean[]& ___m_explored, System.Collections.Generic.List`1[[Minimap+PinData, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_pins, UnityEngine.Texture2D& ___m_fogTexture, System.Collections.Generic.List`1[[ZNet+PlayerInfo, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_tempPlayerInfo, System.Collections.Generic.List`1[[Minimap+SpriteData, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_icons)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Minimap::Update()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-a894053b-c507-46b4-853f-6a554ec22834 took 20ms
+[Info   :   BepInEx] Loading [FortifySkills 1.2]
+[Info   :  HarmonyX] Created Harmony instance id=mod.fortify_skills, version=2.0.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony20.dll - Started from System.Void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel,System.Func`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]) location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Void Player::Awake()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching virtual void Player::Awake() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void FortifySkills.ApplyAwakeChanges::Postfix(Player& __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual void Player::Awake()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 20ms
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Void Skills::Load(ZPackage)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Skills::Load(ZPackage pkg) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void FortifySkills.ApplyLoadChanges::Prefix(Skills& __instance, ZPackage pkg)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Load(ZPackage pkg)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 9ms
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Void Skills::Save(ZPackage)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Skills::Save(ZPackage pkg) with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void FortifySkills.ApplySaveChanges::Prefix(Skills& __instance, ZPackage pkg, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& __state, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_skillData)
+1 postfixes:
+* static void FortifySkills.ApplySaveChanges::Postfix(Skills& __instance, System.Collections.Generic.Dictionary<Skills+SkillType, Skills+Skill> __state, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_skillData)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Save(ZPackage pkg)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 12ms
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Boolean Skills/Skill::Raise(System.Single)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching bool Skills+Skill::Raise(float factor) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void FortifySkills.ApplyRaiseChanges::Prefix(Skills+Skill& __instance, Single& factor)
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Skills+Skill::Raise(float factor)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 9ms
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Void Skills::OnDeath()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Skills::OnDeath() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void FortifySkills.applyOnDeathChanges::Postfix(Skills& __instance, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_skillData)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::OnDeath()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 8ms
+[Info   :  HarmonyX] Patching mod.fortify_skills...
+[Info   :  HarmonyX] Patching System.Void SkillsDialog::Setup(Player)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void SkillsDialog::Setup(Player player) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void FortifySkills.applySetupChanges::Postfix(SkillsDialog& __instance, System.Collections.Generic.List`1[[UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_elements, Player player)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void SkillsDialog::Setup(Player player)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching mod.fortify_skills took 19ms
 [Info   :   BepInEx] Loading [Paddle Power 1.0.1]
+[Info   :  HarmonyX] ### Harmony id=harmony-auto-02c65e6f-0580-4624-858f-20487bade66c, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching void Ship::OnTriggerEnter(UnityEngine.Collider collider) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void PaddlePower.ShipPatch::Ship_EnterExit(UnityEngine.Collider collider, Ship __instance, System.Collections.Generic.List<Player> ___m_players)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::OnTriggerEnter(UnityEngine.Collider collider)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void Ship::OnTriggerExit(UnityEngine.Collider collider) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void PaddlePower.ShipPatch::Ship_EnterExit(UnityEngine.Collider collider, Ship __instance, System.Collections.Generic.List<Player> ___m_players)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::OnTriggerExit(UnityEngine.Collider collider)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void Ship::UpdateOwner() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void PaddlePower.ShipPatch::Ship_UpdateOwner(Ship __instance, System.Collections.Generic.List<Player> ___m_players)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::UpdateOwner()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :   BepInEx] Loading [Mead Base Icon Fix 1.0.1.0]
+[Info   :  HarmonyX] ### Harmony id=harmony-auto-1df2f7b2-c115-41ab-a3e5-16ac3ac585ff, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching void ObjectDB::Awake() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void MeadBaseIconFix.MeadBaseIconFix+ObjectDB_Awake_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::Awake()
+[Info   :  HarmonyX] Writing postfixes
 [Info   :   BepInEx] Loading [Equipment and Quick Slots 1.0.4]
+[Info   :  HarmonyX] Created Harmony instance id=harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62, version=2.0.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony20.dll - Started from System.Void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel,System.Func`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]) location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void HotkeyBar::UpdateIcons(Player)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void HotkeyBar::UpdateIcons(Player player) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.HotkeyBar_UpdateIcons_Patch::Prefix(HotkeyBar __instance, Player player)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void HotkeyBar::UpdateIcons(Player player)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 35ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Boolean Humanoid::EquipItem(ItemDrop+ItemData,System.Boolean)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_EquipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 17ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void Humanoid::UnequipItem(ItemDrop+ItemData,System.Boolean)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+1 postfixes:
+* static void EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Postfix(Humanoid __instance, ItemDrop+ItemData item, Inventory ___m_inventory)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 11ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void InventoryGrid::UpdateGui(Player,ItemDrop+ItemData)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void EquipmentAndQuickSlots.InventoryGrid_UpdateGui_Patch::Postfix(InventoryGrid __instance, Player player, ItemDrop+ItemData dragItem, System.Collections.Generic.List<InventoryGrid+Element> ___m_elements)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 39ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void InventoryGui::OnSelectedItem(InventoryGrid,ItemDrop+ItemData,Vector2i,InventoryGrid+Modifier)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.InventoryGui_OnSelectedItem_Patch::Prefix(InventoryGui __instance, InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod, UnityEngine.GameObject ___m_dragGo, ItemDrop+ItemData ___m_dragItem)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 19ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void Inventory::.ctor(System.String,UnityEngine.Sprite,System.Int32,System.Int32)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Inventory_Constructor_Patch::Prefix(string name, int w, Int32& h)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 12ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void Inventory::GetBoundItems(System.Collections.Generic.List`1[[ItemDrop+ItemData, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]])
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void EquipmentAndQuickSlots.Inventory_GetBoundItems_Patch::Postfix(System.Collections.Generic.List<ItemDrop+ItemData> bound, System.Collections.Generic.List<ItemDrop+ItemData> ___m_inventory)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 9ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Boolean Inventory::HaveEmptySlot()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching bool Inventory::HaveEmptySlot() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Inventory_HaveEmptySlot_Patch::Prefix(Inventory __instance, Boolean& __result)
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Inventory::HaveEmptySlot()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 6ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching Vector2i Inventory::FindEmptySlot(System.Boolean)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching Vector2i Inventory::FindEmptySlot(bool topFirst) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Inventory_FindEmptySlot_Patch::Prefix(Inventory __instance, Vector2i& __result, bool topFirst, int ___m_height, int ___m_width)
+
+[Info   :  HarmonyX] Running ILHook manipulator on Vector2i Inventory::FindEmptySlot(bool topFirst)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 7ms
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62...
+[Info   :  HarmonyX] Patching System.Void Player::UseHotbarItem(System.Int32)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void Player::UseHotbarItem(int index) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Player_UseHotbarItem_Patch::Prefix(Player __instance, int index)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::UseHotbarItem(int index)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching harmony-auto-f484c83b-7169-4537-91e2-145aa59f6b62 took 6ms
 [Info   :   BepInEx] Loading [Jam 1.0.0]
-[Warning: Unity Log] Looking for recipes.json in F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\plugins\Jam\recipes.json
-[Warning: Unity Log] Looking for jamassets in F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\plugins\Jam\jamassets
+[Info   :  HarmonyX] Created Harmony instance id=harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c, version=2.0.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony20.dll - Started from System.Void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel,System.Func`1[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]) location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c...
+[Info   :  HarmonyX] Patching System.Void ObjectDB::CopyOtherDB(ObjectDB)
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void ObjectDB::CopyOtherDB(ObjectDB other) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void Jam.ObjectDB_CopyOtherDB_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::CopyOtherDB(ObjectDB other)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c took 7ms
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c...
+[Info   :  HarmonyX] Patching System.Void ObjectDB::Awake()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void ObjectDB::Awake() with 0 prefixes, 2 postfixes, 0 transpilers, 0 finalizers
+2 postfixes:
+* static void MeadBaseIconFix.MeadBaseIconFix+ObjectDB_Awake_Patch::Postfix()
+* static void Jam.ObjectDB_Awake_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::Awake()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c took 5ms
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c...
+[Info   :  HarmonyX] Patching System.Void ZNetScene::Awake()
+[Info   :  HarmonyX] HarmonyPrepare result: True
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool Jam.ZNetScene_Awake_Patch::Prefix(ZNetScene __instance)
+1 postfixes:
+* static void ClockMod.BepInExPlugin+Awake_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching harmony-auto-3df74612-58bd-4815-a1ad-5512b1134e5c took 10ms
 [Info   :   BepInEx] Loading [Athletics Skill 1.0.0.0]
+[Info   :  HarmonyX] ### Harmony id=spacechase0.Valheim.AthleticsSkill, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching bool Localization::SetupLanguage(string language) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void AthleticsSkill.Patches.MyLocalizationPatch::Postfix(Localization __instance, string language)
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Localization::SetupLanguage(string language)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching float Player::GetMaxCarryWeight() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void AthleticsSkill.Patches.ModifyCarryWeightPatch::Postfix(Player __instance, Single& __result)
+
+[Info   :  HarmonyX] Running ILHook manipulator on float Player::GetMaxCarryWeight()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void PlayerProfile::LoadPlayerData(Player player) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void AthleticsSkill.Patches.LoadSkillsPatch::Postfix(PlayerProfile __instance, Player player)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void PlayerProfile::LoadPlayerData(Player player)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void PlayerProfile::SavePlayerData(Player player) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void AthleticsSkill.Patches.SavekillsPatch::Postfix(PlayerProfile __instance, Player player)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void PlayerProfile::SavePlayerData(Player player)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching bool Skills::IsSkillValid(Skills+SkillType type) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool AthleticsSkill.Patches.ValidSkillPatch::Prefix(Skills __instance, Skills+SkillType type, Boolean& __result)
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Skills::IsSkillValid(Skills+SkillType type)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching Skills+SkillDef Skills::GetSkillDef(Skills+SkillType type) with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void AthleticsSkill.Patches.GetSkillDefPatch::Postfix(Skills __instance, Skills+SkillType type, Skills+SkillDef& __result)
+
+[Info   :  HarmonyX] Running ILHook manipulator on Skills+SkillDef Skills::GetSkillDef(Skills+SkillType type)
+[Info   :  HarmonyX] Writing postfixes
+[Info   :   BepInEx] Loading [TorchesEternal 0.2]
+[Info   :  HarmonyX] ### Harmony id=Xenofell.TorchesEternal, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.12
+[Info   :  HarmonyX] Patching void Fireplace::UpdateFireplace() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void TorchesEternal.Patches::Fireplace_UpdateFireplace(Fireplace __instance, ZNetView& ___m_nview)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Fireplace::UpdateFireplace()
+[Info   :  HarmonyX] Writing prefixes
 [Message:   BepInEx] Chainloader startup complete
-[Info   : Unity Log] 03/08/2021 18:25:12: Starting to load scene:start
+[Info   :  HarmonyX] ### Harmony id=ABearCodes.Valheim.SimpleRecycling, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.13
+[Info   :  HarmonyX] Patching void InventoryGui::OnTabCraftPressed() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::OnTabCraftPressedAlsoEnableRecycling1(InventoryGui __instance)
 
-[Warning: Unity Log] Only custom filters can be played. Please add a custom filter or an audioclip to the audiosource (Amb_MainMenu).
-[Info   : Unity Log] 03/08/2021 18:25:21: Initializing world generator seed: ( 0 )   menu:True  worldgen version:1
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnTabCraftPressed()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void InventoryGui::OnTabUpgradePressed() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::OnTabCraftPressedAlsoEnableRecycling1(InventoryGui __instance)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Using mountain distance: 1000
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnTabUpgradePressed()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void InventoryGui::UpdateCraftingPanel(bool focusView) with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::UpdateCraftingPanelDetourOnRecyclingTab(InventoryGui __instance)
+1 postfixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::UpdateCraftingPanelDetourOnOtherTabsEnableRecyclingButton(InventoryGui __instance)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Render threading mode:MultiThreaded
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::UpdateCraftingPanel(bool focusView)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void InventoryGui::Hide() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::OnHideSetToCraftingTab(InventoryGui __instance)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Using steam_appid.txt
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::Hide()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void InventoryGui::UpdateRecipe(Player player, float dt) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::UpdateRecipeOnRecyclingTab(InventoryGui __instance, Player player, float dt)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Using steam APPID:892970
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::UpdateRecipe(Player player, float dt)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void Inventory::Changed() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::InventorySave()
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Authentication:k_ESteamNetworkingAvailability_Attempting
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::Changed()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_EquipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+1 postfixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::HumanoidEquip(Humanoid __instance)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Steam initialized, persona:BTYR Phoenix_Necro
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 2 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+2 postfixes:
+* static void EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Postfix(Humanoid __instance, ItemDrop+ItemData item, Inventory ___m_inventory)
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::HumanoidEquip(Humanoid __instance)
 
-[Warning: Unity Log] 03/08/2021 18:25:21: Missing audio clip in music respawn
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] ### Harmony id=harmony-auto-f1b7d4c2-f013-400e-a490-56ed28dc48ae, version=2.4.0.0, location=F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll, env/clr=4.0.30319.42000, platform=Win32NT
+### Started from static void HarmonyLib.Tools.Logger::Log(HarmonyLib.Tools.Logger+LogChannel channel, System.Func<string> message), location F:\Steam\steamapps\common\Valheim - Moded client\BepInEx\core\0Harmony.dll
+### At 2021-03-25 09.04.13
+[Info   :  HarmonyX] Patching bool Character::IsSwiming() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool Use_Equipment_in_Water.UseEquipmentInWater::patchIsSwim(Boolean& __result, Humanoid __instance, float ___m_swimTimer)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: Checking for installed DLCs
+[Info   :  HarmonyX] Running ILHook manipulator on bool Character::IsSwiming()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 2 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+2 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_EquipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+* static void Use_Equipment_in_Water.UseEquipmentInWater::patchEquipItem()
+1 postfixes:
+* static void ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::HumanoidEquip(Humanoid __instance)
 
-[Info   : Unity Log] 03/08/2021 18:25:21: DLC:beta installed:False
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void Humanoid::UpdateEquipment(float dt) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void Use_Equipment_in_Water.UseEquipmentInWater::patchUpdateEquipment()
 
-[Info   : Unity Log] 03/08/2021 18:25:22: Loaded localization English
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UpdateEquipment(float dt)
+[Info   :  HarmonyX] Writing prefixes
+[Debug  :SimpleRecycling] Creating tab button
+[Debug  :SimpleRecycling] OnRecycleClick
+[Debug  :SimpleRecycling] Old recipe list had 5 entries. Cleaning up
+[Debug  :SimpleRecycling] Could not find a recipe for $item_cryptkey
+[Debug  :SimpleRecycling] Could not find a recipe for $item_meat_cooked
+[Debug  :SimpleRecycling] Could not find a recipe for $item_meat_raw
+[Debug  :SimpleRecycling] Could not find a recipe for $item_necktail
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_trophy_skeleton
+[Debug  :SimpleRecycling] Could not find a recipe for $item_bonefragments
+[Debug  :SimpleRecycling] Could not find a recipe for $item_mushroomyellow
+[Debug  :SimpleRecycling] Could not find a recipe for $item_amberpearl
+[Debug  :SimpleRecycling] Could not find a recipe for $item_ruby
+[Debug  :SimpleRecycling] Could not find a recipe for $item_amber
+[Debug  :SimpleRecycling] Could not find a recipe for $item_greydwarfeye
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_carrotseeds
+[Debug  :SimpleRecycling] Could not find a recipe for $item_raspberries
+[Debug  :SimpleRecycling] Could not find a recipe for $item_resin
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_ironscrap
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Added 2 entries
+[Debug  :SimpleRecycling] OnRecycleClick
+[Debug  :SimpleRecycling] Old recipe list had 5 entries. Cleaning up
+[Debug  :SimpleRecycling] Could not find a recipe for $item_cryptkey
+[Debug  :SimpleRecycling] Could not find a recipe for $item_meat_cooked
+[Debug  :SimpleRecycling] Could not find a recipe for $item_meat_raw
+[Debug  :SimpleRecycling] Could not find a recipe for $item_necktail
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_trophy_skeleton
+[Debug  :SimpleRecycling] Could not find a recipe for $item_bonefragments
+[Debug  :SimpleRecycling] Could not find a recipe for $item_mushroomyellow
+[Debug  :SimpleRecycling] Could not find a recipe for $item_amberpearl
+[Debug  :SimpleRecycling] Could not find a recipe for $item_ruby
+[Debug  :SimpleRecycling] Could not find a recipe for $item_amber
+[Debug  :SimpleRecycling] Could not find a recipe for $item_greydwarfeye
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_carrotseeds
+[Debug  :SimpleRecycling] Could not find a recipe for $item_raspberries
+[Debug  :SimpleRecycling] Could not find a recipe for $item_resin
+[Debug  :SimpleRecycling] Could not find a recipe for $item_wood
+[Debug  :SimpleRecycling] Could not find a recipe for $item_ironscrap
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Could not find a recipe for $item_surtlingcore
+[Debug  :SimpleRecycling] Added 2 entries
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 2 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+2 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_EquipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+* static void Use_Equipment_in_Water.UseEquipmentInWater::patchEquipItem()
 
-[Info   : Unity Log] 03/08/2021 18:25:22: Loaded localization English
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+1 postfixes:
+* static void EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Postfix(Humanoid __instance, ItemDrop+ItemData item, Inventory ___m_inventory)
 
-[Warning: Unity Log] [Jam] ObjectDB_Awake_Patch (0)
-[Warning: Unity Log] [Jam] Did not register items: ZNetScene.instance , ObjectDB.instance StartGui (ObjectDB), item count 0
-[Warning: Unity Log] [Jam] Did not register recipes: ZNetScene.instance , ObjectDB.instance StartGui (ObjectDB), item count 0
-[Warning: Unity Log] [Jam] ObjectDB_CopyOtherDB_Patch (378)
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_RaspberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyRaspberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_BlueberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyBlueberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_CloudberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_HoneyCloudberryJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_KingsJam
-[Info   : Unity Log] [PrefabCreator] Added recipe: Recipe_NordicJam
-[Info   : Unity Log] 03/08/2021 18:25:22: ARG 0 F:\Steam\steamapps\common\Valheim - Moded client\valheim.exe
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void InventoryGui::OnTabCraftPressed() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
 
-[Info   : Unity Log] 03/08/2021 18:25:24: UI Group status changed Menu = True
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnTabCraftPressed()
+[Info   :  HarmonyX] Patching void InventoryGui::OnTabUpgradePressed() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
 
-[Warning:  HarmonyX] UnpatchAll has been called with harmonyID=null - This will remove ALL HARMONY PATCHES. If you want to only unpatch patches created by this instance (harmony-auto-76c3ffe4-1bf6-41b3-8925-bbb2cc33df97), use UnpatchSelf() instead.
-[Info   : Unity Log] 03/08/2021 18:26:45: Steam manager on destroy
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnTabUpgradePressed()
+[Info   :  HarmonyX] Patching void InventoryGui::UpdateCraftingPanel(bool focusView) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ABearCodes.Valheim.SimpleRecycling.UI.InventoryGuiPatches::UpdateCraftingPanelDetourOnRecyclingTab(InventoryGui __instance)
 
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::UpdateCraftingPanel(bool focusView)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void InventoryGui::UpdateCraftingPanel(bool focusView) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::UpdateCraftingPanel(bool focusView)
+[Info   :  HarmonyX] Patching void InventoryGui::Hide() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::Hide()
+[Info   :  HarmonyX] Patching void InventoryGui::UpdateRecipe(Player player, float dt) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::UpdateRecipe(Player player, float dt)
+[Info   :  HarmonyX] Patching void Inventory::Changed() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::Changed()
+[Info   :  HarmonyX] Patching void Player::UpdatePlacementGhost(bool flashGuardStone) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::UpdatePlacementGhost(bool flashGuardStone)
+[Warning:  HarmonyX] UnpatchAll has been called with harmonyID=null - This will remove ALL HARMONY PATCHES. If you want to only unpatch patches created by this instance (harmony-auto-02c65e6f-0580-4624-858f-20487bade66c), use UnpatchSelf() instead.
+[Info   :  HarmonyX] Patching static void Console::SetOut(System.IO.TextWriter newOut) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on static void Console::SetOut(System.IO.TextWriter newOut)
+[Info   :  HarmonyX] Patching static System.Reflection.Assembly System.Reflection.Assembly::LoadFile(string path) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on static System.Reflection.Assembly System.Reflection.Assembly::LoadFile(string path)
+[Info   :  HarmonyX] Patching static System.Reflection.Assembly System.Reflection.Assembly::LoadFrom(string assemblyFile) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on static System.Reflection.Assembly System.Reflection.Assembly::LoadFrom(string assemblyFile)
+[Info   :  HarmonyX] Patching virtual string System.Reflection.Assembly::get_Location() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void BepInEx.Preloader.RuntimeFixes.UnityPatches::GetLocation(String& __result, System.Reflection.Assembly __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual string System.Reflection.Assembly::get_Location()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching virtual string System.Reflection.Assembly::get_Location() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual string System.Reflection.Assembly::get_Location()
+[Info   :  HarmonyX] Patching virtual string System.Reflection.Assembly::get_CodeBase() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual string System.Reflection.Assembly::get_CodeBase()
+[Info   :  HarmonyX] Patching void FejdStartup::Start() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void FejdStartup::Start()
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool Jam.ZNetScene_Awake_Patch::Prefix(ZNetScene __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Patching void Console::InputText() with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool ValheimMapSyncBepinex.MapSyncPlugin::Prefix(Console __instance)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void Console::InputText() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Patching void EnvMan::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void EnvMan::Awake()
+[Info   :  HarmonyX] Patching void ZoneSystem::Start() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZoneSystem::Start()
+[Info   :  HarmonyX] Patching void RandEventSystem::Start() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void RandEventSystem::Start()
+[Info   :  HarmonyX] Patching virtual void Player::UseStamina(float v) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual void Player::UseStamina(float v)
+[Info   :  HarmonyX] Patching static UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object original, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on static UnityEngine.Object UnityEngine.Object::Instantiate(UnityEngine.Object original, UnityEngine.Vector3 position, UnityEngine.Quaternion rotation)
+[Info   :  HarmonyX] Patching void Player::SetLocalPlayer() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::SetLocalPlayer()
+[Info   :  HarmonyX] Patching void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text)
+[Info   :  HarmonyX] Patching void Minimap::Update() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Minimap::Update()
+[Info   :  HarmonyX] Patching virtual void Player::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual void Player::Awake()
+[Info   :  HarmonyX] Patching void Skills::Load(ZPackage pkg) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Load(ZPackage pkg)
+[Info   :  HarmonyX] Patching void Skills::Save(ZPackage pkg) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void FortifySkills.ApplySaveChanges::Prefix(Skills& __instance, ZPackage pkg, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& __state, System.Collections.Generic.Dictionary`2[[Skills+SkillType, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null],[Skills+Skill, assembly_valheim, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]& ___m_skillData)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Save(ZPackage pkg)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void Skills::Save(ZPackage pkg) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Save(ZPackage pkg)
+[Info   :  HarmonyX] Patching bool Skills+Skill::Raise(float factor) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Skills+Skill::Raise(float factor)
+[Info   :  HarmonyX] Patching void Skills::OnDeath() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::OnDeath()
+[Info   :  HarmonyX] Patching void SkillsDialog::Setup(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void SkillsDialog::Setup(Player player)
+[Info   :  HarmonyX] Patching void Ship::OnTriggerEnter(UnityEngine.Collider collider) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::OnTriggerEnter(UnityEngine.Collider collider)
+[Info   :  HarmonyX] Patching void Ship::OnTriggerExit(UnityEngine.Collider collider) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::OnTriggerExit(UnityEngine.Collider collider)
+[Info   :  HarmonyX] Patching void Ship::UpdateOwner() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Ship::UpdateOwner()
+[Info   :  HarmonyX] Patching void ObjectDB::Awake() with 0 prefixes, 1 postfixes, 0 transpilers, 0 finalizers
+1 postfixes:
+* static void Jam.ObjectDB_Awake_Patch::Postfix()
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::Awake()
+[Info   :  HarmonyX] Writing postfixes
+[Info   :  HarmonyX] Patching void ObjectDB::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::Awake()
+[Info   :  HarmonyX] Patching void HotkeyBar::UpdateIcons(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void HotkeyBar::UpdateIcons(Player player)
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static void Use_Equipment_in_Water.UseEquipmentInWater::patchEquipItem()
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 1 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+1 prefixes:
+* static bool EquipmentAndQuickSlots.Humanoid_UnequipItem_Patch::Prefix(ItemDrop+ItemData item, Inventory ___m_inventory)
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Writing prefixes
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Patching void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem)
+[Info   :  HarmonyX] Patching void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod)
+[Info   :  HarmonyX] Patching void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h)
+[Info   :  HarmonyX] Patching void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound)
+[Info   :  HarmonyX] Patching bool Inventory::HaveEmptySlot() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Inventory::HaveEmptySlot()
+[Info   :  HarmonyX] Patching Vector2i Inventory::FindEmptySlot(bool topFirst) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on Vector2i Inventory::FindEmptySlot(bool topFirst)
+[Info   :  HarmonyX] Patching void Player::UseHotbarItem(int index) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::UseHotbarItem(int index)
+[Info   :  HarmonyX] Patching void ObjectDB::CopyOtherDB(ObjectDB other) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::CopyOtherDB(ObjectDB other)
+[Info   :  HarmonyX] Patching bool Localization::SetupLanguage(string language) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Localization::SetupLanguage(string language)
+[Info   :  HarmonyX] Patching float Player::GetMaxCarryWeight() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on float Player::GetMaxCarryWeight()
+[Info   :  HarmonyX] Patching void PlayerProfile::LoadPlayerData(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void PlayerProfile::LoadPlayerData(Player player)
+[Info   :  HarmonyX] Patching void PlayerProfile::SavePlayerData(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void PlayerProfile::SavePlayerData(Player player)
+[Info   :  HarmonyX] Patching bool Skills::IsSkillValid(Skills+SkillType type) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Skills::IsSkillValid(Skills+SkillType type)
+[Info   :  HarmonyX] Patching Skills+SkillDef Skills::GetSkillDef(Skills+SkillType type) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on Skills+SkillDef Skills::GetSkillDef(Skills+SkillType type)
+[Info   :  HarmonyX] Patching void Fireplace::UpdateFireplace() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Fireplace::UpdateFireplace()
+[Info   :  HarmonyX] Patching bool Character::IsSwiming() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Character::IsSwiming()
+[Info   :  HarmonyX] Patching void Humanoid::UpdateEquipment(float dt) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UpdateEquipment(float dt)
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Patching void ZNetScene::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ZNetScene::Awake()
+[Info   :  HarmonyX] Patching void Console::InputText() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Patching void Console::InputText() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Console::InputText()
+[Info   :  HarmonyX] Patching void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Chat::OnNewChatMessage(UnityEngine.GameObject go, long senderID, UnityEngine.Vector3 pos, Talker+Type type, string user, string text)
+[Info   :  HarmonyX] Patching void Minimap::Update() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Minimap::Update()
+[Info   :  HarmonyX] Patching virtual void Player::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on virtual void Player::Awake()
+[Info   :  HarmonyX] Patching void Skills::Load(ZPackage pkg) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Load(ZPackage pkg)
+[Info   :  HarmonyX] Patching void Skills::Save(ZPackage pkg) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Save(ZPackage pkg)
+[Info   :  HarmonyX] Patching void Skills::Save(ZPackage pkg) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::Save(ZPackage pkg)
+[Info   :  HarmonyX] Patching bool Skills+Skill::Raise(float factor) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Skills+Skill::Raise(float factor)
+[Info   :  HarmonyX] Patching void Skills::OnDeath() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Skills::OnDeath()
+[Info   :  HarmonyX] Patching void SkillsDialog::Setup(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void SkillsDialog::Setup(Player player)
+[Info   :  HarmonyX] Patching void HotkeyBar::UpdateIcons(Player player) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void HotkeyBar::UpdateIcons(Player player)
+[Info   :  HarmonyX] Patching bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Humanoid::EquipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Patching void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Humanoid::UnequipItem(ItemDrop+ItemData item, bool triggerEquipEffects)
+[Info   :  HarmonyX] Patching void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGrid::UpdateGui(Player player, ItemDrop+ItemData dragItem)
+[Info   :  HarmonyX] Patching void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void InventoryGui::OnSelectedItem(InventoryGrid grid, ItemDrop+ItemData item, Vector2i pos, InventoryGrid+Modifier mod)
+[Info   :  HarmonyX] Patching void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::.ctor(string name, UnityEngine.Sprite bkg, int w, int h)
+[Info   :  HarmonyX] Patching void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Inventory::GetBoundItems(System.Collections.Generic.List<ItemDrop+ItemData> bound)
+[Info   :  HarmonyX] Patching bool Inventory::HaveEmptySlot() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on bool Inventory::HaveEmptySlot()
+[Info   :  HarmonyX] Patching Vector2i Inventory::FindEmptySlot(bool topFirst) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on Vector2i Inventory::FindEmptySlot(bool topFirst)
+[Info   :  HarmonyX] Patching void Player::UseHotbarItem(int index) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void Player::UseHotbarItem(int index)
+[Info   :  HarmonyX] Patching void ObjectDB::CopyOtherDB(ObjectDB other) with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::CopyOtherDB(ObjectDB other)
+[Info   :  HarmonyX] Patching void ObjectDB::Awake() with 0 prefixes, 0 postfixes, 0 transpilers, 0 finalizers
+
+[Info   :  HarmonyX] Running ILHook manipulator on void ObjectDB::Awake()
